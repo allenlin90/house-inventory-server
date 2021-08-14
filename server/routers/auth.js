@@ -44,7 +44,7 @@ router.post('/line', async (req, res) => {
             res.status(error.response.status || 400).send(error.response.data || `invalid request`);
         }
     } else {
-        res.status(403).send('session expired');
+        res.status(401).send('session expired');
     }
 });
 
